@@ -20,6 +20,16 @@ nums= [5,7,3,2,-9,0,23,12]
 #         print(nums[i])
 
 
-for val in nums:
-    print(val)
+# for val in nums:
+#     print(val)
 
+
+
+for j in range(5, 10, 1):
+    print(j)
+
+
+j = 5
+while(j<10):
+    print(j)
+    j+=1
