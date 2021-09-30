@@ -1,13 +1,9 @@
 import car
 
-print("car looks like this-->",car)
 
-#think of the class User as a BLUEPRINT--> a set of instructions to create many instances from
 class User:
-    #class attribuetes go before the __init__ method
     maxCaloriesAllowedToConsume = 2000
-    def __init__(self,nameInput, emailInput, ageInput): #this is the __init__ method (a method is just a function that belongs inside a class)
-        #name, email, age, and totalCalories are ATTRIBUTES--> more specifically-> INSTANCE ATTRIBUTES
+    def __init__(self,nameInput, emailInput, ageInput): 
         self.name = nameInput
         self.email = emailInput
         self.age = ageInput
@@ -17,10 +13,7 @@ class User:
         self.familyCar = car.Car("Mazeradi")
 
     def eat(self, numCalories):
-        # print(f"{self.name} is eating")
-        # self.totalCalories+= numCalories
-        # return self
-        if(numCalories > User.maxCaloriesAllowedToConsume):
+        if(numCalories < User.maxCaloriesAllowedToConsume):
             print("woah there young blood, thats cheese cake bruleee factory or whats good wit you. Insulin spike be cray cray. basically go exercise foo")
             return self
         else:
@@ -62,44 +55,6 @@ class User:
 #creating OBJECTS here--> an object is an instance of a class
 user1 = User("Rob", "rob@gmail.com", 29)
 user2 = User("Larry", "larry@gmail.com", 74)
-user2.eat(5000)
-
-User.change_max_calorie_allowed(3000)
-
-
-
-
-# user1.eat(1000)
-# user2.eat(75)
-# user1.exercise(300)
-# user2.exercise(100)
-
-# user1.displayInfo()
-# user2.displayInfo()
-
-# user1.eat(100).eat(200).eat(1000).exercise(200).exercise(100)
-
-# user1.displayInfo()
-
-# print('*********')
-
-# print(user1.maxCaloriesAllowedToConsume)
-# print(user2.maxCaloriesAllowedToConsume)
-# User.maxCaloriesAllowedToConsume= 2500
-# print("increased max calories allowed to consume for ALLL users")
-# print(user1.maxCaloriesAllowedToConsume)
-# print(user2.maxCaloriesAllowedToConsume)
-
-# user1.totalCalories += 200
-# user2.totalCalories +=500
-# print("user 1 just ate 200 calories worth of food")
-
-# print(user1.totalCalories) #200
-# print(user2.totalCalories) #500
-
-
-print("PRINTING INFO ABOUT USER'S CAR BELOW")
-user1.drive(10,"work").displayInfo()
 
 
 
